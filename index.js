@@ -16,12 +16,7 @@ if (!jwtPrivateKey){
   process.exit(1);
 }
 
-// if (!config.get('jwtPrivateKey')){
-//     console.log('FATAL ERROR: jwtPrivateKey is not defined');
-//     process.exit(1);
-// }
 
-// mongoose.connect('mongodb://localhost/vidly')
 mongoose.connect(process.env.vidly_db)
 .then(() => console.log('Connected to MongoDB...'))
 .catch(err => console.log('Could not connect to MongoDB...', err.message))
